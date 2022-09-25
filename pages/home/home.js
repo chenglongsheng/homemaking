@@ -1,6 +1,8 @@
 import Service from '../../model/service'
+import Category from "../../model/category";
 
 const service = new Service()
+const category = new Category()
 
 Page({
     data: {
@@ -9,13 +11,20 @@ Page({
             {id: 1, name: "清洁"},
             {id: 2, name: "汽修"},
             {id: 3, name: "控件"}
+        ],
+        serviceList: [
+            {}
         ]
     },
     onLoad: function (options) {
-        this._getServiceList()
+        // this._getServiceList()
+        // this._getCategoryList()
     },
     async _getServiceList() {
         await service.getServiceList(1, 10)
+    },
+    async _getCategoryList() {
+        await category.getCategoryList()
     },
     handleTabChange(e) {
         console.log(e)
