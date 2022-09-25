@@ -13,6 +13,11 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-icon": "/components/icon/icon",
+    "i-tabs": "/components/tabs/tabs",
+    "i-service-preview": "/components/service-preview/service-preview"
+  },
   "tabBar": {
     "borderStyle": "white",
     "selectedColor": "#F8C82D",
