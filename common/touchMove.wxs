@@ -1,0 +1,31 @@
+// 不支持ES6语法和wx.API
+var touchStartX
+
+function handleTouchstart(e) {
+    touchStartX = e.changedTouches[0].clientX
+}
+
+function handleTouchend(e, ownerInstance) {
+    var touchEndX = e.changedTouches[0].clientX
+    // 左滑为负数，右滑正数
+    var distance = touchEndX - touchStartX
+    // -1(后退) 0(不动) 1(前进)
+    var direction = 0
+    if (distance < 0 && distance < -70) {
+        direction = 1
+    }
+    if (distance > 0 && distance > 70) {
+        direction = -1
+    }
+
+    if (direction !== 0) {
+        //触发移动事件
+        ownerInstance.callMethod('handleTouchMove', {direction: direction})
+    }
+
+}
+
+module.exports = {
+    handleTouchstart: handleTouchstart,
+    handleTouchend: handleTouchend
+}

@@ -1,0 +1,18 @@
+<!--导入wxs-->
+<wxs src="../../common/touchMove.wxs" module="touch"></wxs>
+<view class="container">
+    <view class="tabs">
+        <view class="tab-item" wx:for="{{tabs}}" wx:key="index" bind:tap="handleTabChange" data-index="{{index}}">
+            <view class="tab-label {{currentTabIndex === index ? 'active-tab' : ''}}">
+                {{item}}
+            </view>
+            <!--逻辑控制-->
+            <view class="divider" wx:if="{{currentTabIndex === index}}"></view>
+        </view>
+    </view>
+    <!--定义插槽位置-->
+    <slot name="extend"></slot>
+    <view class="tab-panel" bind:touchstart="{{touch.handleTouchstart}}" bind:touchend="{{touch.handleTouchend}}">
+        <slot name="panel"></slot>
+    </view>
+</view>
