@@ -1,0 +1,204 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/9/26上午11:07:58
+使用方法：
+在 E:\WeChatProjects\homemaking\pages\home\home.wxml 引入模板
+
+```
+<import src="home.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 E:\WeChatProjects\homemaking\pages\home\home.wxss 中引入样式
+```
+@import "./home.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container">
+      <view is="components/tabs/tabs">
+        <view class="tabs--container">
+          <view class="tabs--tabs">
+            <view class="tabs--tab-item" data-index="0">
+              <view class="tabs--tab-label tabs--active-tab sk-transparent sk-text-14-2857-426 sk-text">
+                全部服务
+              </view>
+              <view class="tabs--divider"></view>
+            </view>
+            <view class="tabs--tab-item" data-index="1">
+              <view class="tabs--tab-label sk-transparent sk-text-14-2857-246 sk-text">
+                在提供
+              </view>
+            </view>
+            <view class="tabs--tab-item" data-index="2">
+              <view class="tabs--tab-label sk-transparent sk-text-14-2857-848 sk-text">
+                正在找
+              </view>
+            </view>
+          </view>
+          <view>
+            <view class="category">
+              <image style="height:75px; width:80%;" class="sk-image"></image>
+            </view>
+          </view>
+          <view class="tabs--tab-panel">
+            <view>
+              <view>
+                <view is="components/service-preview/service-preview">
+                  <view class="preview--container">
+                    <view class="preview--left">
+                      <view class="preview--type-tag sk-transparent sk-text-14-2857-355 sk-text">正在找</view>
+                      <image class="preview--cover-image sk-image" mode="aspectFill"></image>
+                    </view>
+                    <view class="preview--right">
+                      <view class="preview--row">
+                        <view class="preview--service-title sk-transparent sk-text-14-2857-631 sk-text">北京路找一名保安</view>
+                        <view class="preview--category">
+                          <view is="components/icon/icon">
+                            <view class="icon--iconfont icon--icon-tag sk-pseudo sk-pseudo-circle" style="font-size:17px; color: #f27013;"></view>
+                          </view>
+                          <view class="preview--category-text sk-transparent sk-text-14-2857-886 sk-text">护理</view>
+                        </view>
+                      </view>
+                      <view class="preview--row">
+                        <view class="preview--publisher">
+                          <view class="preview--publisher-avatar">
+                            <image class="preview--publisher-avatar-image sk-image"></image>
+                          </view>
+                          <view class="preview--publisher-nickname sk-transparent sk-text-14-2857-680 sk-text">龙哥</view>
+                        </view>
+                        <view class="preview--score sk-transparent sk-text-14-2857-422 sk-text">⭐ 5</view>
+                      </view>
+                      <view class="preview--row">
+                        <view class="preview--create-time sk-transparent sk-text-14-2857-34 sk-text">2022-09-25 14:02:03</view>
+                      </view>
+                      <view class="preview--row preview--row-last">
+                        <view class="preview--price sk-transparent">
+                          <text class="preview--label sk-transparent sk-opacity">￥</text>12000.0
+                        </view>
+                        <view class="preview--sales sk-transparent sk-text-14-2857-149 sk-text">已售 0</view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view>
+                <view is="components/service-preview/service-preview">
+                  <view class="preview--container">
+                    <view class="preview--left">
+                      <view class="preview--type-tag sk-transparent sk-text-14-2857-366 sk-text">正在找</view>
+                      <image class="preview--cover-image sk-image" mode="aspectFill"></image>
+                    </view>
+                    <view class="preview--right">
+                      <view class="preview--row">
+                        <view class="preview--service-title sk-transparent sk-text-14-2857-367 sk-text">北京路找一名保安</view>
+                        <view class="preview--category">
+                          <view is="components/icon/icon">
+                            <view class="icon--iconfont icon--icon-tag sk-pseudo sk-pseudo-circle" style="font-size:17px; color: #f27013;"></view>
+                          </view>
+                          <view class="preview--category-text sk-transparent sk-text-14-2857-862 sk-text">护理</view>
+                        </view>
+                      </view>
+                      <view class="preview--row">
+                        <view class="preview--publisher">
+                          <view class="preview--publisher-avatar">
+                            <image class="preview--publisher-avatar-image sk-image"></image>
+                          </view>
+                          <view class="preview--publisher-nickname sk-transparent sk-text-14-2857-779 sk-text">XXX</view>
+                        </view>
+                        <view class="preview--score sk-transparent sk-text-14-2857-97 sk-text">⭐ 0</view>
+                      </view>
+                      <view class="preview--row">
+                        <view class="preview--create-time sk-transparent sk-text-14-2857-803 sk-text">2022-09-25 14:02:03</view>
+                      </view>
+                      <view class="preview--row preview--row-last">
+                        <view class="preview--price sk-transparent">
+                          <text class="preview--label sk-transparent sk-opacity">￥</text>12000.0
+                        </view>
+                        <view class="preview--sales sk-transparent sk-text-14-2857-33 sk-text">已售 0</view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view>
+                <view is="components/service-preview/service-preview">
+                  <view class="preview--container">
+                    <view class="preview--left">
+                      <view class="preview--type-tag sk-transparent sk-text-14-2857-230 sk-text">正在找</view>
+                      <image class="preview--cover-image sk-image" mode="aspectFill"></image>
+                    </view>
+                    <view class="preview--right">
+                      <view class="preview--row">
+                        <view class="preview--service-title sk-transparent sk-text-14-2857-31 sk-text">北京路找一名保安</view>
+                        <view class="preview--category">
+                          <view is="components/icon/icon">
+                            <view class="icon--iconfont icon--icon-tag sk-pseudo sk-pseudo-circle" style="font-size:17px; color: #f27013;"></view>
+                          </view>
+                          <view class="preview--category-text sk-transparent sk-text-14-2857-734 sk-text">护理</view>
+                        </view>
+                      </view>
+                      <view class="preview--row">
+                        <view class="preview--publisher">
+                          <view class="preview--publisher-avatar">
+                            <image class="preview--publisher-avatar-image sk-image"></image>
+                          </view>
+                          <view class="preview--publisher-nickname sk-transparent sk-text-14-2857-925 sk-text">XXX</view>
+                        </view>
+                        <view class="preview--score sk-transparent sk-text-14-2857-303 sk-text">⭐ 0</view>
+                      </view>
+                      <view class="preview--row">
+                        <view class="preview--create-time sk-transparent sk-text-14-2857-156 sk-text">2022-09-25 14:02:03</view>
+                      </view>
+                      <view class="preview--row preview--row-last">
+                        <view class="preview--price sk-transparent">
+                          <text class="preview--label sk-transparent sk-opacity">￥</text>12000.0
+                        </view>
+                        <view class="preview--sales sk-transparent sk-text-14-2857-450 sk-text">已售 0</view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view>
+                <view is="components/service-preview/service-preview">
+                  <view class="preview--container">
+                    <view class="preview--left">
+                      <view class="preview--type-tag sk-transparent sk-text-14-2857-243 sk-text">正在找</view>
+                      <image class="preview--cover-image sk-image" mode="aspectFill"></image>
+                    </view>
+                    <view class="preview--right">
+                      <view class="preview--row">
+                        <view class="preview--service-title sk-transparent sk-text-14-2857-191 sk-text">北京路找一名保安</view>
+                        <view class="preview--category">
+                          <view is="components/icon/icon">
+                            <view class="icon--iconfont icon--icon-tag sk-pseudo sk-pseudo-circle" style="font-size:17px; color: #f27013;"></view>
+                          </view>
+                          <view class="preview--category-text sk-transparent sk-text-14-2857-910 sk-text">护理</view>
+                        </view>
+                      </view>
+                      <view class="preview--row">
+                        <view class="preview--publisher">
+                          <view class="preview--publisher-avatar">
+                            <image class="preview--publisher-avatar-image sk-image"></image>
+                          </view>
+                          <view class="preview--publisher-nickname sk-transparent sk-text-14-2857-682 sk-text">XXX</view>
+                        </view>
+                        <view class="preview--score sk-transparent sk-text-14-2857-653 sk-text">⭐ 0</view>
+                      </view>
+                      <view class="preview--row">
+                        <view class="preview--create-time sk-transparent sk-text-14-2857-853 sk-text">2022-09-25 14:02:03</view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

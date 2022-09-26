@@ -113,15 +113,17 @@ Page({
             }
         ],
         tabIndex: 0,
-        categoryId: 0
+        categoryId: 0,
+        loading: true
     },
     /**
      * 页面加载
      * @param options
      */
-    onLoad: function (options) {
-        // this._getServiceList()
-        // this._getCategoryList()
+    onLoad: async function (options) {
+        // await this._getServiceList()
+        // await this._getCategoryList()
+        this.setData({loading: false})
     },
 
     async _getServiceList() {
