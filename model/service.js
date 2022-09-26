@@ -21,12 +21,10 @@ class Service {
      * @param type          服务类型
      */
     async getServiceList(category_id = null, type = null) {
-
         // 避免一直请求
         if (!this.hasMoreData) {
             return this.data
         }
-
         console.log("获取服务列表")
         const serviceList = await Http.request({
             url: 'v1/service/list',
