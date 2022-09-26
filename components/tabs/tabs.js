@@ -1,3 +1,5 @@
+import {throttle} from "../../utils/utils";
+
 Component({
     options: {
         // 开启多插槽
@@ -15,18 +17,19 @@ Component({
     },
     methods: {
         // 传入一个数组，通知父组件或者正在使用组件的页面
-        handleTabChange(e) {
-            const index = e.currentTarget.dataset.index
-            // 避免重复点击
-            if (index === this.data.currentTabIndex) {
-                return
+        handleTabChange: throttle(function (e) {
+                const index = e.currentTarget.dataset.index
+                // 避免重复点击
+                if (index === this.data.currentTabIndex) {
+                    return
+                }
+                this.setData({
+                    currentTabIndex: index
+                })
+                // 传数据出去
+                this.triggerEvent('change', {index})
             }
-            this.setData({
-                currentTabIndex: index
-            })
-            // 传数据出去
-            this.triggerEvent('change', {index})
-        },
+        ),
 
         handleTouchMove(e) {
             console.log(e)

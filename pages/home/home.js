@@ -1,5 +1,6 @@
 import Service from '../../model/service'
 import Category from "../../model/category";
+import {throttle} from "../../utils/utils";
 
 const service = new Service()
 const category = new Category()
@@ -145,14 +146,14 @@ Page({
      * 点击分类
      * @param e 事件
      */
-    handleCategoryChange(e) {
+    handleCategoryChange: throttle(function (e) {
         if (this.data.categoryId === e.currentTarget.dataset.id) {
             return
         }
         console.log(e)
         this.data.categoryId = e.currentTarget.dataset.id
         this._getCategoryList()
-    },
+    }),
     /**
      * 下拉刷新
      */
