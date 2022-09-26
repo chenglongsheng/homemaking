@@ -5,6 +5,11 @@ import Http from "../utils/http";
 
 class Service {
 
+    /**
+     * 实例对象是有状态的
+     * 静态方法是类方法
+     * 实例方法是对象方法
+     */
     page = 1
     size = 4
     data = []
@@ -38,6 +43,19 @@ class Service {
         this.page++
         return this.data
     }
+
+    /**
+     * 重置成员变量
+     * @returns {Service}
+     */
+    reset() {
+        this.page = 1
+        this.size = 4
+        this.data = []
+        this.hasMoreData = true
+        return this
+    }
+
 }
 
 export default Service

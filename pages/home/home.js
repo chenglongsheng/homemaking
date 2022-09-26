@@ -113,8 +113,11 @@ Page({
     /**
      * 下拉刷新
      */
-    onPullDownRefresh() {
+    async onPullDownRefresh() {
         console.log("下拉刷新")
+        const serviceList = await service.reset().getServiceList()
+        this.setData({serviceList})
+        wx.stopPullDownRefresh()
     },
     /**
      * 上拉触底
