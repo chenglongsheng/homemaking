@@ -136,6 +136,17 @@ Page({
         this.setData({categoryList})
     },
     /**
+     * 点击服务
+     * @param e
+     */
+    handleSelectService(e) {
+        console.log(e)
+        const service = e.currentTarget.dataset.service
+        wx.navigateTo({
+            url: '/pages/service-detail/service-detail?service_id=' + service.id
+        })
+    },
+    /**
      * 切换tab【全部服务，在提供，正在找】
      * @param e 事件
      */

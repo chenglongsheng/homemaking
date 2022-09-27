@@ -43,6 +43,17 @@ class Service {
     }
 
     /**
+     * 根据id获取服务信息
+     * @param serviceId
+     * @returns {Promise<*|undefined>}
+     */
+    static getServiceById(serviceId) {
+        return Http.request({
+            url: `service/${serviceId}`
+        })
+    }
+
+    /**
      * 重置成员变量
      * @returns {Service}
      */
