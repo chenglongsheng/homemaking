@@ -2,18 +2,15 @@
  * 模型的意义：分离调用与内部实现，实现功能解耦
  */
 import Http from "../utils/http";
+import Base from "./base";
 
-class Service {
+class Service extends Base{
 
     /**
      * 实例对象是有状态的
      * 静态方法是类方法
      * 实例方法是对象方法
      */
-    page = 1
-    size = 4
-    data = []
-    hasMoreData = true
 
     /**
      * 分页获取服务列表
@@ -51,18 +48,6 @@ class Service {
         return Http.request({
             url: `service/${serviceId}`
         })
-    }
-
-    /**
-     * 重置成员变量
-     * @returns {Service}
-     */
-    reset() {
-        this.page = 1
-        this.size = 4
-        this.data = []
-        this.hasMoreData = true
-        return this
     }
 
 }
