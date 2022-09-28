@@ -43,7 +43,9 @@
     <view class="service-rating">
         <view class="service-rating-title">历史评价</view>
         <view class="service-rating-list">
-            <view wx:for="{{ratingList}}" wx:key="index"></view>
+            <view wx:for="{{ratingList}}" wx:key="index">
+                <i-service-rating rating="{{item}}"></i-service-rating>
+            </view>
         </view>
     </view>
     <view class="action-bar"></view>

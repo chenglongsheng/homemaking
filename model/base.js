@@ -6,7 +6,7 @@ class Base {
 
     /**
      * 重置成员变量
-     * @returns {Service}
+     * @returns
      */
     reset() {
         this.page = 1

@@ -48,7 +48,7 @@ Page({
     },
 
     async _getServiceRatingList() {
-        const ratingList = await rating.getServiceRatingList(this.data.serviceId);
+        const ratingList = await rating.reset().getServiceRatingList(this.data.serviceId);
         this.setData({
             ratingList
         })

@@ -1,10 +1,17 @@
 import Http from "../utils/http";
 
 class Category{
-    async getCategoryList() {
+
+    static async getCategoryList(){
         return Http.request({
-            url:'category/list'
+            url:'v1/category',
         })
+    }
+
+    static async getCategoryListWithAll(){
+        const categoryList = await Category.getCategoryList()
+        categoryList.unshift({id:0,name:'全部'})
+        return categoryList
     }
 }
 
