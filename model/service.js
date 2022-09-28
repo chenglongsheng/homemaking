@@ -31,7 +31,7 @@ class Service extends Base {
                 category_id: category_id || '',
                 type: type || ''
             }
-        },)
+        })
         this.data = this.data.concat(serviceList.data)
         this.hasMoreData = !(this.page === serviceList.last_page)
         this.page++

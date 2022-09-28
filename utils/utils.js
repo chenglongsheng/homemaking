@@ -18,4 +18,13 @@ function throttle(callback, duration = 500) {
     }
 }
 
-export {throttle}
+/**
+ * 获取事件回调参数的自定义属性
+ * @param {Object} event
+ * @param {String} target
+ */
+function getDataSet(event, target) {
+    return event.currentTarget.dataset[target]
+}
+
+export {throttle, getDataSet}

@@ -5,7 +5,11 @@
     "pages/my/my",
     "pages/publish/publish",
     "pages/service-detail/service-detail",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/service-edit/service-edit",
+    "pages/conversation/conversation",
+    "pages/order/order",
+    "pages/order-success/order-success"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -23,7 +27,9 @@
     "i-show-status": "/components/show-status/show-status",
     "i-avatar": "/components/avatar/avatar",
     "i-rating": "/components/rating/rating",
-    "i-service-rating": "components/service-rating/service-rating"
+    "i-service-rating": "/components/service-rating/service-rating",
+    "i-safe-area": "/components/safe-area/safe-area",
+    "i-button": "/components/button/button"
   },
   "tabBar": {
     "borderStyle": "white",

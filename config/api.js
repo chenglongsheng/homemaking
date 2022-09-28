@@ -1,5 +1,5 @@
 const APIConfig = {
-    baseUrl: 'https://qingchenju.com/homemaking/'
+    baseUrl: 'https://test.com/homemaking/'
 }
 
 export default APIConfig
