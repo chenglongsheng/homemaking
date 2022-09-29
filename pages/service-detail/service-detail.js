@@ -2,27 +2,72 @@ import Service from "../../model/service";
 import User from "../../model/user";
 import Rating from "../../model/rating";
 import serviceAction from "../../enum/service-action";
+import serviceType from "../../enum/service-type";
 
 const rating = new Rating();
 
 Page({
     data: {
+        serviceTypeEnum: serviceType,
         service: {
             id: 10,
-            type: 2,
+            type: 1,
+            cover_image: {
+                id: 24,
+                path: "https://note-1010.oss-cn-beijing.aliyuncs.com/img/image-20210829230656830.png"
+            },
+            category: {
+                name: "护理"
+            },
+            publisher: {
+                id: 1,
+                avatar: "https://note-1010.oss-cn-beijing.aliyuncs.com/img/boy.jpg",
+                nickname: "龙哥"
+            },
             designated_place: 0,
             title: '北京招工',
-            description: "adasdasafiuasdhfasufh",
+            description: "在北京路找工作",
             price: '123.00',
             begin_date: "2021-04-29",
-            score: 0,
+            score: 5,
             status: 2,
             sales_volume: 0,
             create_time: '2021-04-29 20:45:23'
         },
         serviceId: null,
         isPublisher: true,
-        ratingList: []
+        ratingList: [
+            {
+                id: 1,
+                score: 4,
+                content: "牛哭，跟买了新的一样。师傅非常牛逼！",
+                illustration: [
+                    "https://note-1010.oss-cn-beijing.aliyuncs.com/img/image-20210914235534452.png",
+                    "https://note-1010.oss-cn-beijing.aliyuncs.com/img/image-20210914235534452.png"
+                ],
+                status: 2,
+                create_time: "2022-06-23 14:44:12",
+                author: {
+                    avatar: "https://note-1010.oss-cn-beijing.aliyuncs.com/img/boy.jpg",
+                    nickname: "龙哥"
+                }
+            },
+            {
+                id: 1,
+                score: 5,
+                content: "牛哭，跟买了新的一样。师傅非常牛逼！",
+                illustration: [
+                    "https://note-1010.oss-cn-beijing.aliyuncs.com/img/image-20210914235534452.png",
+                    "https://note-1010.oss-cn-beijing.aliyuncs.com/img/image-20210914235534452.png"
+                ],
+                status: 2,
+                create_time: "2022-06-23 14:44:12",
+                author: {
+                    avatar: "https://note-1010.oss-cn-beijing.aliyuncs.com/img/boy.jpg",
+                    nickname: "龙哥"
+                }
+            }
+        ]
     },
     onLoad: async function (options) {
         console.log(options)
